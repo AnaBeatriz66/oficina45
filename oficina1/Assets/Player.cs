@@ -1,21 +1,68 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player: MonoBehaviour
-
-
-       public float Speed;
 {
+    public float Speed;
+    public float jumpForce;
+
+    public bool isJumping;
+
+    private Rigidbody2D rig;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rig = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 moviment = new Vector3(Input.GetAxis("Horizontal")0f,0f)
+        Move();
     }
+
+    void Move ()
+     {
+        Vector3 moviment = new Vector3(Input.GetAxis("Horizontal"),0f,0f);
+        transform.position += moviment * Time.deltaTime * Speed;
+     }
+    void jump ()
+    {
+        if(Input.GetButtonDown("Jump"));
+        {
+            if (!isJumping)
+            {
+               rig.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+               //doublejump = true;
+            }
+            else
+            {
+             // if (doublejump)
+              {
+                 rig.AddForce(new Vector2(0f, jumpForce ), ForceMode2D.Impulse);
+                 //doublejump = true;
+              }
+
+            }
+
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) 
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            isJumping = false;
+        }
+
+    }
+
+    void OnCollisionExit2D(Collision2D collision) 
+    {
+         isJumping = true;
+    }
+}
+
 }
