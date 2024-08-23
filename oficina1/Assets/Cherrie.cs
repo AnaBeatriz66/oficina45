@@ -21,10 +21,14 @@ public class apple : MonoBehaviour
     // Update is called once per frame
     void onTriggerEnter2D(Collider2d collider)
     {
-        if(collider.GameObject.tag== "Player")
+        if(collider.gameObject.tag == "Player")
         {
             sr.enabled = false;
             circle.enabled = false;
+            collected.SetActive(true);
+
+            GameController.instance.totalScore += Score;
+
             Destroy(gameObject, 0.25f);
         
         }
