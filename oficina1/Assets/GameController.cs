@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 
 
 
-    public int totalScore;
+    /*public int totalScore;
     public Text scoreTezv gh kjj
     public static GameController instance;
     // Start is called before the first frame update
@@ -20,5 +20,11 @@ public class GameController : MonoBehaviour
     void Update()
     {
         
+    
+    
+    
     }
+    */
+    
 }
+

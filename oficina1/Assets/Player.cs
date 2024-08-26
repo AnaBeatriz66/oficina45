@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Player: MonoBehaviour
 {
-    public float Speed;
+   public float Speed;
+   
     public float jumpForce;
 
     public bool isJumping;
@@ -13,7 +14,7 @@ public class Player: MonoBehaviour
     private Rigidbody2D rig;
     private Animator anim;
 
-    // Start is called before the first frame update
+   // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -24,7 +25,7 @@ public class Player: MonoBehaviour
     void Update()
      {
         Move();
-        Jump();
+        jump();
      }
 
        void Move ()
@@ -66,12 +67,14 @@ public class Player: MonoBehaviour
       void OnCollisionExit2D(Collision2D collision) 
       {
 
-       if (collision.gameobject.layer == 8 )
+       if (collision.gameObject.layer == 8 )
        {
          isJumping = true;
 
        }
+   
     }
+    
 }
 
 
