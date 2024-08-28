@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cherry : MonoBehaviour
 {
-   /* private SpriteRenderer sr;
+   private SpriteRenderer sr;
     private CircleCollider2D circle;
     
     public GameObject collected;
@@ -34,5 +34,5 @@ public class Cherry : MonoBehaviour
         }
         
     }
-    */
+    
 }
