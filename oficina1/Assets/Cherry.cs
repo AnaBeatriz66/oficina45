@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class apple : MonoBehaviour
+public class Cherry : MonoBehaviour
 {
     private SpriteRenderer sr;
     private CircleCollider2D circle;
@@ -14,12 +14,12 @@ public class apple : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sr = GetComponet<SpriteRenderer>();
-        circle = GetComponet<CircleCollider2D>();
+        sr = GetComponent<SpriteRenderer>();
+        circle = GetComponent<CircleCollider2D>();
         
     }
     // Update is called once per frame
-    void onTriggerEnter2D(Collider2d collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.gameObject.tag == "Player")
         {
