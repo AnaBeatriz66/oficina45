@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -17,10 +18,9 @@ public class GameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void UpdateScoreText()
     {
-        
-   
+        scoreText.text = totalScore.ToString();
     }
     
 }
