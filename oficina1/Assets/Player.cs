@@ -81,6 +81,10 @@ public class Player : MonoBehaviour
                 isJumping = false;
                 anim.SetBool("jump",false);
             }
+            if (collision.gameObject.tag == "Spike")
+            {
+               Debug.Log("Tocou o espinho!");
+            }
 
         }
 
