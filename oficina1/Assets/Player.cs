@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
             if (collision.gameObject.tag == "Spike")
             {
                GameController.instance.ShowGameOver();
-               Destroy(gameobject);
+               Destroy(gameObject);
             }
 
         }

@@ -8,31 +8,32 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     
-    public int totalScore;
-    public TMP_Text scoreText;
+   public int totalScore;
+    public Text scoreText;
 
     public GameObject gameOver;
     public static GameController instance;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
     }
 
-    // Update is called once per frame
     public void UpdateScoreText()
     {
         scoreText.text = totalScore.ToString();
     }
+
     
     public void ShowGameOver()
     {
-        gameOver.setActive(true);
+        gameOver.SetActive(true);
     }
 
-    public void RestartGame();
+    public void RestartGame(string lvlName)
     {
-
+        SceneManager.LoadScene(lvlName);
     }
 }
+
