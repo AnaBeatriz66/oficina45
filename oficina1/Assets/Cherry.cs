@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Cherry : MonoBehaviour
 {
-   private SpriteRenderer sr;
+
+    private SpriteRenderer sr;
     private CircleCollider2D circle;
-    
+
     public GameObject collected;
     public int Score;
-
 
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         circle = GetComponent<CircleCollider2D>();
-        
     }
-    // Update is called once per frame
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.gameObject.tag == "Player")
@@ -30,10 +29,8 @@ public class Cherry : MonoBehaviour
             GameController.instance.totalScore += Score;
             GameController.instance.UpdateScoreText();
 
-            Destroy(gameObject, 0.25f);
-        
+            Destroy(gameObject , 0.3f);
         }
-        
     }
-    
 }
+
