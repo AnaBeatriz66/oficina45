@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
                 anim.SetBool("jump",false);
             }
 
-            if (collision.gameObject.tag == "Spike")
+            if (collision.gameObject.tag == "Spikes")
             {
                GameController.instance.ShowGameOver();
                Destroy(gameObject);
