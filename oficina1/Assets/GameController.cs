@@ -26,6 +26,9 @@ public class GameController : MonoBehaviour
     {
         gameOver.SetActive(true);
     }
+    public void teste(){
+        
+    }
     
     public void RestartGame( string lVLName)
     {
