@@ -614,9 +614,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  jumpForce: 6
+  JumpForce: 7
   isJumping: 0
-  doublejump: 0
+  doubleJump: 0
 --- !u!50 &637086567
 Rigidbody2D:
   serializedVersion: 4
@@ -2061,6 +2061,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1163097280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6356846468467700000, guid: 9a4bfad27aa5f9b4f9e5f8797769ad63, type: 3}
+  m_PrefabInstance: {fileID: 2033438325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1163097281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163097280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b140615c621c1e94785ed00e4763d428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lVLName: fase2
 --- !u!1 &1401652965
 GameObject:
   m_ObjectHideFlags: 0
@@ -5565,7 +5583,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6356846468467700000, guid: 9a4bfad27aa5f9b4f9e5f8797769ad63, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1163097281}
   m_SourcePrefab: {fileID: 100100000, guid: 9a4bfad27aa5f9b4f9e5f8797769ad63, type: 3}
 --- !u!1 &2129722507
 GameObject:
@@ -5597,7 +5618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalScore: 0
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 556458099}
   gameOver: {fileID: 0}
 --- !u!4 &2129722509
 Transform:

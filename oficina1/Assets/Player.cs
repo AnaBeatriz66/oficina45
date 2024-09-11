@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
             if(!isJumping)
             {
                 rig.AddForce(new Vector2 (0f,JumpForce),ForceMode2D.Impulse);  
+                isJumping = true;
                 doubleJump = true;
             }
             else
@@ -83,19 +84,21 @@ public class Player : MonoBehaviour
         if(collision.gameObject.layer == 8)
         {
             isJumping = false;
+            anim.SetBool("jump", false);
         }
-        if(collision.gameObject.tag == "spikes")
+        if(collision.gameObject.tag == "Spikes")
         {
             GameController.instance.ShowGameOver();
             Destroy(gameObject);
         }
     }
 
-        void OnCollicionExit2D(Collision2D collision)
+        void OnCollisionExit2D(Collision2D collision)
     {
         if(collision.gameObject.layer ==8)
         {
            isJumping = true;
+           anim.SetBool("jump", true);
    
         }
     }
